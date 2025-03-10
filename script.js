@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function displayCountryInfo(country) {
         countryInfo.innerHTML = `
-            <div id="country-info">
+            <section id="country-info">
                 <img src="${country.flags.png}" alt="${country.name.common} flag">
-                <div id="country-details">
+                <article id="country-details">
                     <h2>${country.name.common}</h2>
                     <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : "N/A"}</p>
                     <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
                     <p><strong>Region:</strong> ${country.region}</p>
-                </div>
-            </div>
+                </article>
+            </section>
         `;
 
         // Display bordering countries
@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const neighbor = borderData[0];
 
                 borderingCountries.innerHTML += `
-                    <div class="border-country">
+                    <section class="border-country">
                         <img src="${neighbor.flags.png}" alt="${neighbor.name.common} flag">
                         <p>${neighbor.name.common}</p>
-                    </div>
+                    </section>
                 `;
             });
         } else {
