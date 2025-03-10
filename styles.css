@@ -1,1 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
 
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 80%;
+}
