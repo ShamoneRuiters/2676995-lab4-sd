@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Country Information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Info Fetcher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label for="country-input">Country Name:</label>
-    <input type="text" id="country-input" placeholder="Enter country name">
-    <button id="fetch-country-btn">Submit</button>
+    <h1>Country Information Fetcher</h1>
+
+    <section>
+        <input type="text" id="country-input" placeholder="Enter country name">
+        <button id="fetch-country-btn">Fetch Country Info</button>
+    </section>
 
     <section id="country-info"></section>
     <section id="bordering-countries"></section>
@@ -15,4 +20,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
