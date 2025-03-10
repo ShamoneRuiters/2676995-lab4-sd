@@ -1,19 +1,59 @@
+/* Basic styling for the body */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    text-align: center; /* Center-aligns content */
     padding: 20px;
 }
 
-input, button {
-    padding: 8px;
-    margin-top: 10px;
+/* Input field styling */
+input[type="text"] {
+    padding: 10px;
+    width: 200px; /* Fixed width for input field */
+    font-size: 16px;
+    margin-bottom: 10px; /* Space below the input field */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for input */
 }
 
-#country-info, #bordering-countries {
+/* Button styling */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background for the button */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green when hovering */
+}
+
+/* Section styling */
+section {
     margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd; /* Light gray border */
+    background-color: white; /* White background for sections */
+    border-radius: 4px; /* Rounded corners for sections */
 }
 
-img {
-    width: 150px;
-    height: auto;
-    margin: 10px 0;
+/* Section titles */
+section h2, section h3 {
+    margin-bottom: 10px; /* Space below section titles */
 }
+
+section p {
+    font-size: 16px;
+    color: #333; /* Dark text color for better readability */
+}
+
+/* Styling for flags in the sections */
+#country-info img, #bordering-countries img {
+    max-width: 100px; /* Limit flag width */
+    height: auto;
+    margin-top: 10px; /* Space above the flag */
+}
+
