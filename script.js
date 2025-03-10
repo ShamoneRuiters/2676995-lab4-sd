@@ -15,9 +15,11 @@ async function fetchCountryByName(countryName) {
 }
 
 function displayCountryInfo(country) {
+    const capital = country.capital ? country.capital[0] : 'N/A';
+    
     countryInfo.innerHTML = `
         <h2>${country.name.common}</h2>
-        <p><strong>Capital:</strong> ${country.capital}</p>
+        <p><strong>Capital:</strong> ${capital}</p>
         <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
         <p><strong>Region:</strong> ${country.region}</p>
         <p><strong>Flag:</strong></p>
@@ -31,8 +33,7 @@ function displayCountryInfo(country) {
             const borderData = await borderRes.json();
             const neighbor = borderData[0];
             borderingCountries.innerHTML += `
-                <p>${neighbor.name.common}:</p>
-                <img src="${neighbor.flags.png}" alt="${neighbor.name.common} flag">
+                <p>${neighbor.name.common}</p>
             `;
         });
     } else {
@@ -41,8 +42,8 @@ function displayCountryInfo(country) {
 }
 
 fetchCountryBtn.addEventListener('click', () => {
-    const countryInput = document.getElementById('country-input').value;
+    const countryInput = document.getElementById('country-input').value.trim();
     countryInfo.innerHTML = '';
     borderingCountries.innerHTML = '';
-    fetchCountryByName(countryInput);
+    if (countryInput) fetchCountryByName(countryInput);
 });
