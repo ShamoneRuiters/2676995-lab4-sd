@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // once loaded
     const fetchCountryBtn = document.getElementById('fetch-country-btn');
     const countryInfo = document.getElementById('country-info');
     const borderingCountries = document.getElementById('bordering-countries');
 
-    fetchCountryBtn.addEventListener('click', () => {
+    fetchCountryBtn.addEventListener('click', () => { // retrieves from the html elements
         const countryInput = document.getElementById('country-input').value.trim();
         countryInfo.innerHTML = ''; // Clear previous results
         borderingCountries.innerHTML = ''; // Clear previous bordering countries
